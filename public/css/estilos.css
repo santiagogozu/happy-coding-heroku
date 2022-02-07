@@ -1,0 +1,657 @@
+/* ANIMACIONES */
+
+/* CONTAINER BODY */
+.contenedor{
+  display: flex;
+  height: 700px;
+  align-items: center;
+  }
+
+/* BARRA DE BUSQUEDA */
+.buscar{
+  position: absolute;
+  padding: 5px;
+  top: 4%;
+  left: 50%;
+}
+.buscar input{
+  width: 0px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  align-items: right;
+  transition: all 1s ease;
+}
+.btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(253, 232, 239);
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  color: var(--clr-bg);
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.buscar:hover input{
+  width: 240px;
+}
+.buscar input:focus{
+  width: 240px;
+}
+
+
+
+
+/* BOTONES */
+.elementoTshirts{
+  flex-grow: 1;
+}
+.elementoSocks{
+  flex-grow: 1;
+}
+.elementoBags{
+  flex-grow: 1;
+}
+.elementoHoodies{
+  flex-grow: 1;
+}
+.elementoHats{
+  flex-grow: 1;
+}
+
+/* COLORES BOTONES */
+:root {
+  --clr-neon: rgb(255, 153, 20);
+  --clr-bg: rgb(41, 37, 39);
+  --clr-bl:rgb(75, 255, 20);
+  --clr-bm:rgb(169, 20, 255);
+  --clr-ba:rgb(20, 63, 255);
+  --clr-br:rgb(255, 20, 59);
+}
+
+
+/* FONDO, LETRA Y TAMANO BODY */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--clr-bg);
+  font-family: 'Roboto Mono', monospace;
+  color: var(--clr-neon);
+  
+}
+
+/* BOTON T-SHIRTS */
+.neon-button {
+  font-size: 2.8rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+}
+
+.neon-button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+  opacity: 1;
+}
+.neon-button:hover::after,
+.neon-button:focus::after {
+  opacity: 1;
+}
+
+
+/* BOTON FUNKY SOCKS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.neon1-button {
+  font-size: 2.8rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-bl);
+  border: var(--clr-bl) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-bl), 0 0 0.5em 0 var(--clr-bl);
+
+  position: relative;
+}
+
+.neon1-button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-bl);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon1-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-bl);
+  opacity: 0;
+  background-color: var(--clr-bl);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon1-button:hover,
+.neon1-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neon1-button:hover::before,
+.neon1-button:focus::before {
+  opacity: 1;
+}
+.neon1-button:hover::after,
+.neon1-button:focus::after {
+  opacity: 1;
+}
+
+
+/* BOTON HACKER BAGS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.neon2-button {
+  font-size: 2.8rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-bm);
+  border: var(--clr-bm) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-bm), 0 0 0.5em 0 var(--clr-bm);
+
+  position: relative;
+}
+
+.neon2-button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-bm);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon2-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-bm);
+  opacity: 0;
+  background-color: var(--clr-bm);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon2-button:hover,
+.neon2-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neon2-button:hover::before,
+.neon2-button:focus::before {
+  opacity: 1;
+}
+.neon2-button:hover::after,
+.neon2-button:focus::after {
+  opacity: 1;
+}
+
+/* BOTON CODE HODDIES */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.neon3-button {
+  font-size: 2.8rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-ba);
+  border: var(--clr-ba) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-ba), 0 0 0.5em 0 var(--clr-ba);
+
+  position: relative;
+}
+
+.neon3-button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-ba);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon3-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-ba);
+  opacity: 0;
+  background-color: var(--clr-ba);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon3-button:hover,
+.neon3-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neon3-button:hover::before,
+.neon3-button:focus::before {
+  opacity: 1;
+}
+.neon3-button:hover::after,
+.neon3-button:focus::after {
+  opacity: 1;
+}
+
+/* BOTON SMART HATS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.neon4-button {
+  font-size: 2.8rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-br);
+  border: var(--clr-br) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-br), 0 0 0.5em 0 var(--clr-br);
+
+  position: relative;
+}
+
+.neon4-button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-br);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon4-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-br);
+  opacity: 0;
+  background-color: var(--clr-br);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon4-button:hover,
+.neon4-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neon4-button:hover::before,
+.neon4-button:focus::before {
+  opacity: 1;
+}
+.neon4-button:hover::after,
+.neon4-button:focus::after {
+  opacity: 1;
+}
+
+
+
+/* ***************************************************************************** */
+
+/* CSS TSHIRTS */
+
+.Tshirts{
+  /* height: 150px; */
+  /*IMPORTANTE*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.MargenTshirts {
+  font-size: 2.8rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  margin: 1vh 5% 5% 5%;
+  display: flex;
+}
+
+.articulos{
+
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+
+div.main-article{
+  /* height: 80%; */
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+
+
+  display: flex;
+  justify-content: center;
+}
+
+.camisa{
+  height:45%;
+  width: 45%;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 2px solid;
+  border-radius: 0.25em;
+  margin: 1%;
+  
+}
+
+
+.contedorCamisa{
+  height: 80%;
+  /* width: 80%; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.ContededorImagen{
+  display: flex;
+  justify-content: center;
+}
+
+.imgCamisa{
+  
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+
+}
+
+
+.imgCamisa:hover {
+  transform: scale(1.8); 
+}
+
+
+
+.price{
+  font-size: 100%;
+}
+
+
+
+.MargenTshirts2 {
+  width: 40%;
+  font-size: 2.8rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.camisaCompra1{
+  height: 80%;
+  display: none;
+}
+
+.camisaCompra2{
+  height: 80%;
+  display: none;
+}
+
+.camisaCompra3{
+  height: 80%;
+  display: none;
+}
+
+.camisaCompra4{
+  height: 80%;
+  display: none;
+}
+
+
+
+
+.contedorCamisa1{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.imgCamisa1{
+  height: 90%;
+   width: 100%;
+  /* object-fit: contain; */
+}
+
+.descripcion{
+  font-size: 1.5vw ;
+  text-align: justify;
+}
+
+.precio-carrito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.MargenSocks{
+  font-size: 2.8rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  margin: 1vh 5% 5% 5%;
+  display: flex;
+}
+
+.MargenHoodies {
+  font-size: 2.8rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-ba);
+  border: var(--clr-ba) 0.125em solid;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-ba), 0 0 0.5em 0 var(--clr-ba);
+  margin: 1vh 5% 5% 5%;
+  display: flex;
+}
+
+.MargenHoodies2 {
+  width: 40%;
+  font-size: 2.8rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-ba);
+  border: var(--clr-ba) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-ba), 0 0 0.5em 0 var(--clr-ba);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hoodies{
+  height:45%;
+  width: 45%;
+  color: var(--clr-ba);
+  border: var(--clr-ba) 2px solid;
+  border-radius: 0.25em;
+  margin: 1%;
+  
+}
